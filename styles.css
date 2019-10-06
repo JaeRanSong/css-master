@@ -1,3 +1,42 @@
-body{
-    background-color:#1dd1a1;
+/*
+li:matches(:nth-child(even), .target){
+    background-color: aquamarine;
 }
+*/
+
+/*
+li:not(.target){
+    background-color: antiquewhite;
+}
+*/
+/*
+:root{
+    --awsomeColor:#f7797d;
+}
+
+li:first-child a{
+    color: var(--awsomeColor);
+}
+
+@custom-selector :--headers h1, h2, h3, h4, h5, h6;
+
+:--headers{
+    color:#FBD786;
+}*/
+/* 
+@custom-media --ipad-size (500px <= width < 850px);
+
+ @media(--ipad-size){
+     body{
+     background-color: #C6FFDD;
+    }
+ }*/
+ 
+ h1:hover{
+     color: color-mod(#f5af19 lightness(50%));
+ }
+ 
+ h1{
+     font-family: system-ui;
+ }
+ 
