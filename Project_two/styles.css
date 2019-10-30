@@ -1,7 +1,164 @@
 :root{
+--leftPadding:25px;
+--borderTop:1px solid #CAD3C8;
+}
+h1, h2, h3, h4, h5{
+    margin: 0;
+    padding:0;
+}
 
+*{
+    box-sizing: border-box;
 }
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fff;
+}
+
+.header{
+margin-top: 30px;
+margin-left: var(--leftPadding);
+margin-bottom: 40px;
+}
+
+.navigation{
+    margin:0px var(--leftPadding);
+    margin-bottom: 30px;
+}
+.navigation .navigation__list{
+    list-style-type: none;
+    display: grid;
+    padding:0;
+    margin:0;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap:45px;
+}
+.navigation__list .navigation__item{
+    display: grid;
+    grid-template-rows:3fr 1fr;
+    grid-gap:15px;
+    text-align: center;
+ 
+}
+.navigation__item .item__icon{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1.5px 3px rgba(0,0,0,0.16), 0 1.5px 3px rgba(0,0,0,0.13);
+    transition: box-shadow 0.1s linear;
+    cursor: pointer;
+}  
+.navigation__list:hover .navigation__item{
+    opacity: 0.5;
+}
+
+.navigation__list .navigation__item:hover {
+opacity: 1;
+}
+.navigation__list .navigation__item:hover .item__icon {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
+
+}
+.navigation__item .item__text{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.featured{
+    padding-top: 30px;
+    margin-left: var(--leftPadding);
+    border-top: var(--borderTop);
+    
+}
+.featured .featured__title{
+    margin-bottom: 30px;
+}
+.featured .featured__wrapper{
+    display: grid;
+    
+    grid-auto-columns:minmax(280px, 1fr);
+    grid-auto-flow: column;
+    overflow: scroll;
+    grid-gap: 20px;
+    padding-bottom: 25px;
+}
+.featured__wrapper .featured-meal{
+    height: 150px;
+    border-radius: 17px;
+    display: flex;
+    align-items: flex-end;
+    padding:20px;
+    color: #fff;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center center;
+}
+.featured-meal:first-child{
+    background-image: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0,0.2)),
+    url(https://lh3.googleusercontent.com/s13ISFNytFGOLNxyRmL3e3zMK7bWtRqjoR1Rgn5sHPYszzudIggNts8ymnhbuXdRJ34JkVqvt6VZ4Rm8bU7mdA=s640-c-rj-v1-e365);
+    
+}
+.featured-meal:nth-child(2){
+    background-image: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0,0.2)),
+    url(https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fit,w_760/https%3A%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F3%2F2018%2F12%2F0eb929bc2c007ebf6009316a327b1e37587045a4.jpeg);
+    
+}
+.featured-meal:nth-child(3){
+    background-image: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0,0.2)),
+    url(http://recipe1.ezmember.co.kr/cache/recipe/2016/08/31/3bffc2f4b8094accbb1bc9d2bc123e941.png);
+   
+}
+.featured-meal:nth-child(4){
+    background-image: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0,0.2)),
+    url(https://978c3pus0d-flywheel.netdna-ssl.com/wp-content/uploads/2015/08/the-best-homemade-margherita-pizza-1-4.jpg);
+   
+}
+.featured-meal:nth-child(5){
+    background-image: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0,0.2)),
+    url(https://www.lavenderandmacarons.com/wp-content/uploads/2017/03/easy-french-onion-soup-recipe.jpg);
+    
+}
+
+
+.featured-meal__title{
+margin-right: 10px;
+}
+.featured-meal__button{
+background-color: #fff;
+border-radius: 5px;
+
+width:20px;
+height: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center; 
+}
+
+.recipes{
+margin-top: 25px;
+padding-top: 25px;
+border-top: var(--borderTop);
+}
+.recipes__list{
+    list-style: none;
+   padding: 0 var(--leftPadding);
+} 
+.recipes__list .recipe{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.recipe__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: var(--borderTop);
+    background-color:#fff;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
 }
